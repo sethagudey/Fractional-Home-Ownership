@@ -44,6 +44,40 @@ nav a {
     transform: translateY(0);
   }
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: inline-block;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-block;
+    color: white;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
 /* =====================
    RESPONSIVE STYLES
 ===================== */
