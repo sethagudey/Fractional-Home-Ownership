@@ -7,6 +7,14 @@ body {
   color: white;
   overflow-x: hidden;
 }
+.menu-toggle {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
 
 body::before {
   content: "";
