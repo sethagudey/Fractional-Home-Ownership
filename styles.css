@@ -18,7 +18,9 @@ body::before {
 
 nav {
   padding: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
@@ -102,28 +104,38 @@ p {
   line-height: 1.6;
 }
 
-/* Mobile devices */
+/* Mobile & Tablet */
 @media (max-width: 768px) {
-  nav {
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #020617;
+    border-radius: 10px;
     padding: 15px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
   }
 
-  nav a {
-    display: inline-block;
-    margin: 8px 10px;
-    font-size: 0.95rem;
+  .nav-links.active {
+    max-height: 300px;
+    opacity: 1;
   }
 
-  h1 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .hero {
-    margin-top: 80px;
+  .nav-links a {
+    display: block;
+    margin: 12px 0;
+    text-align: right;
   }
 }
+
 
