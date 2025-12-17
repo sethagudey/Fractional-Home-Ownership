@@ -286,3 +286,56 @@ footer p {
     opacity: 1;
   }
 }
+/* =========================
+   PARTNERS SLIDER
+========================= */
+
+.partners-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.partners-track {
+  display: flex;
+  gap: 40px;
+  animation: scrollPartners 30s linear infinite;
+}
+
+.partner-logo {
+  min-width: 180px;
+  height: 90px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@keyframes scrollPartners {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .partner-logo {
+    min-width: 140px;
+    height: 70px;
+    font-size: 0.85rem;
+  }
+}
